@@ -1,0 +1,63 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Sad', monospace;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transition: background 0.5s;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    animation: scrollBackground 120s linear infinite;
+    background-attachment: fixed;
+}
+
+/* Scroll background animation */
+@keyframes scrollBackground {
+    0% { background-position: center top; }
+    100% { background-position: center bottom; }
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: white;
+}
+
+p {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+a {
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    margin: 10px 0;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+/* Bug Styles */
+.bug {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: url('roach2.webp') no-repeat center center / contain;
+    pointer-events: none;
+    opacity: 0; /* Initially hidden */
+    transition: transform 0.1s linear;
+    z-index: 10; /* Ensure the bug is above other elements */
+}
